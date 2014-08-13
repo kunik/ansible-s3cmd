@@ -1,0 +1,13 @@
+---
+galaxy_info:
+  author: Taras Kunch
+  description: Installs s3cmd tool
+  company: Rebbix
+  min_ansible_version: 1.4
+  platforms:
+  - name: Ubuntu
+    versions:
+    - precise
+  categories:
+  - system
+  - web
