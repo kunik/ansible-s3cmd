@@ -4,7 +4,7 @@
   apt: pkg=s3cmd state=present
 
 - name: Configure s3cmd
-  sudo: false
-  template: >
-    src=s3cfg.j2
-    dest=/home/{{ s3cmd.user }}/.s3cfg
+  sudo: true
+  template:
+    src= s3cfg.j2
+    dest= /home/{{ s3cmd.user }}/.s3cfg
