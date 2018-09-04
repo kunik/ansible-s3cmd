@@ -6,5 +6,7 @@
 - name: Configure s3cmd
   sudo: true
   template:
-    src= s3cfg.j2
-    dest= /home/{{ s3cmd.user }}/.s3cfg
+    src: s3cfg.j2
+    dest: /home/{{ s3cmd.user }}/.s3cfg
+    owner: {{ s3cmd.user }}
+    group: {{ s3cmd.user }}
