@@ -1,28 +1,38 @@
-Ansible s3cmd
-=============
+# Ansible Role: s3cmd
 
-Installs s3cmd tool
+Install s3cmd and creates basic configuration.
 
-Requirements
-------------
+## Requirements
 
-No
+None
 
-Role Variables
---------------
+## Role Variables
+
+All variables sit under ```s3cmd``` key:
 
 ```
 s3cmd:
   key: 'aws-key'
   secret: 'aws-secret'
+  user: 'root'
 ```
 
-Dependencies
-------------
+    key: 'aws-key'
 
-No
+Your public IAM key.
 
-License
--------
+    secret: 'aws-secret'
+
+Your secret IAM key. Do not leave these in plain text. Use Ansible Vault or another key storage mechanism.
+
+    user: 'root'
+
+User to place the ```.s3cfg``` under. Defaults to the root user.
+
+## Dependencies
+
+None
+
+## License
 
 BSD
